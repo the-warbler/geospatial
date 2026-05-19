@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="webGeo.css" rel="stylesheet" type="text/css">
+      <title>Satellite Imagery</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="homepage.html">geospatial</a>
+            <div class="menu-btn otherMenu" id="menu-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <a href="WhereIs.html">Where Is...?</a>
+            <a href="Geography.html">Geography</a>
+            <a href="SatelliteImagery.html">Satellite Imagery</a>
+            <a href="Infrastructure.html">Infrastructure</a>
+        </div>
+        <div class="container">
+            <h2>Satellite Imagery</h2>
+            <p>The Copernicus data is sourced from the Google Earth Engine Data Catalog and the light pollution data is from NASA. <br> Give the Copernicus data a minute to load and try zooming in and out if it doesn't appear.</p>
+            <div class="select-box">
+                <label for="satellite-type">Imagery Type:</label>
+                <select id="satellite-type" onchange="updateSatelliteTypes()">
+                    <option value="CopernicusImagery">Copernicus Imagery Timelapse</option>
+                    <option value="Copernicus">Copernicus</option>
+                    <option value="NightLights">Night Lights</option>
+                </select>
+            </div>
+            <div class="select-box">
+                <label for="city">Location:</label>
+                <select id="city"></select>
+            </div>
+            <button class="go-button" onclick="showSatellite()">Go</button>
+        </div>
+        <div class="mapContainer">
+            <div id="map"></div>
+        </div>
+        <script src="website.js"></script>
+    </body>
+</html>

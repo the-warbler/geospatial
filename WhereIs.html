@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="webGeo.css" rel="stylesheet" type="text/css">
+        <title>Where is...?</title>
+    </head>
+    <body>
+        <div class = "navbar">
+            <a href="homepage.html">geodata</a>
+            <div class="menu-btn otherMenu" id="menu-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <a href="WhereIs.html">Where Is...?</a>
+            <a href="Geography.html">Geography</a>
+            <a href="SatelliteImagery.html">Satellite Imagery</a>
+            <a href="Infrastructure.html">Infrastructure</a>
+        </div>
+        <div class="container">
+            <h2>Where Is...</h2>
+            <div class="select-box">
+               <label for="city">Country:</label>
+               <select id="city">
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="China">China</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+               </select>
+            </div>
+            <div class="select-box">
+               <label for="map-type">Map Type:</label>
+               <select id="map-type">
+                  <option value="Location">Location</option>
+                  <option value="AdminAreas">Administrative Areas</option>
+               </select>
+            </div>
+            <button class="go-button" onclick="showMap()">Go</button>
+         </div>
+         <div class = "mapContainer">
+            <div id="map"></div>
+         </div>
+        <script src="website.js"></script>
+    </body>
+</html>

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Poppins";
+    font-size: 160px;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+h2 {
+    font-family: "Poppins";
+    font-size: 80px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+p {
+    font-family: "Poppins";
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.select-box {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: Poppins;
+}
+
+select {
+    padding: 10px;
+    font-family: Poppins;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.go-button {
+    color: white;
+    font-size: 16px;
+    background-color: teal;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.go-button:hover {
+    background-color: teal;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}   
+
+.container {
+    width: 80%;
+    margin: 80px auto 20px auto;
+    text-align: center;
+}
+
+.mapContainer img {
+    height: 100%; 
+    width: auto; 
+}
+
+#map {
+    height: 63vh; 
+    padding: 0px;
+    overflow: hidden;
+}
+
+/* Nav Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 1000;
+    list-style-type: none;
+    
+}
+
+div.navbar a {
+    font-family: "Poppins";
+    color: black;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 60px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hamburger Menu */
+.menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.menu-btn div {
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.otherMenu div {
+    background-color: black;
+}
+
+.menu-btn.open div:nth-child(1) {
+    background-color: black;
+    transform: rotate(45deg) translate(6px, 12px);
+}
+.menu-btn.open div:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.open div:nth-child(3) {
+    background-color: black;
+    transform: rotate(-45deg) translate(6px, -12px);
+}
+.menu {
+    background-color: white;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 999;
+}
+
+.menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu a {
+    font-family: Poppins;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.menu a:hover {
+    color: white;
+	background-color: #008080;
+}
+
+
+/* Video */
+#myVideo {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.homeOverlay {
+    color: #f1f1f1;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.homeOverlay h1 {
+    margin: 0; 
+}
+
+.homeOverlay p {
+    margin: 0px;
+    font-size: 20px;
+    color: white 
+}
+
+/* Loading Screen */
+#loading-screen {
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+}
